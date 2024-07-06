@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  width: 200px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.card-description {
+  color: gray;
+  font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
